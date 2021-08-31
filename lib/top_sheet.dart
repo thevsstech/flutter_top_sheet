@@ -41,11 +41,11 @@ class TopSheet extends StatefulWidget {
 }
 
 class _TopSheetState extends State<TopSheet> with TickerProviderStateMixin {
-  Animation<double> _animation;
-  Animation<double> _opacityAnimation;
-  AnimationController _animationController;
+  late Animation<double> _animation;
+  late Animation<double> _opacityAnimation;
+  late AnimationController _animationController;
 
-  final _childKey = GlobalKey();
+  final GlobalKey<ScaffoldState> _childKey = GlobalKey();
 
   double get _childHeight {
     final RenderBox renderBox = _childKey.currentContext.findRenderObject();
@@ -128,7 +128,7 @@ class _TopSheetState extends State<TopSheet> with TickerProviderStateMixin {
                 key: _childKey,
                 children: <Widget>[
                   _isDirectionTop ? Container() : Spacer(),
-                  AnimatedBuilder(
+                  AnimatedBuilde"r(
                       animation: _animation,
                       builder: (context, _) {
                         return Transform(
