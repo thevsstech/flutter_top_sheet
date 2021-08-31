@@ -128,7 +128,7 @@ class _TopSheetState extends State<TopSheet> with TickerProviderStateMixin {
                 key: _childKey,
                 children: <Widget>[
                   _isDirectionTop ? Container() : Spacer(),
-                  AnimatedBuilde"r(
+                  AnimatedBuilder(
                       animation: _animation,
                       builder: (context, _) {
                         return Transform(
